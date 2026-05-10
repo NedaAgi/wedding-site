@@ -1,5 +1,5 @@
 /** Ceremony moment (local). Single source of truth for countdown + displayed date. */
-export const WEDDING_DATE_TIME_ISO = '2027-08-12T15:00:00' as const;
+export const WEDDING_DATE_TIME_ISO = '2027-08-14T00:00:00' as const;
 
 const wedding = new Date(WEDDING_DATE_TIME_ISO);
 

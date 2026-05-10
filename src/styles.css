@@ -171,13 +171,30 @@ main {
 }
 
 .hero-location {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55em;
   margin: 0 0 2.25rem;
   font-family: var(--font-ui);
   font-size: clamp(0.42rem, 0.42vw + 0.36rem, 0.54rem);
   font-weight: 500;
+  line-height: 1;
   letter-spacing: 0.56em;
   text-transform: uppercase;
   color: var(--color-ink-muted);
+}
+
+.hero-location-label {
+  display: inline-block;
+}
+
+.hero-location-pin {
+  flex-shrink: 0;
+  display: block;
+  width: 1.28em;
+  height: 1.28em;
+  align-self: center;
 }
 
 .countdown-shell {
@@ -252,17 +269,23 @@ main {
 
 .hero-footer-text {
   margin: 0;
-  margin-top: 2rem;
+  margin-top: 2.25rem;
   font-family: var(--font-ui);
-  font-size: clamp(0.52rem, 0.4vw + 0.43rem, 0.62rem);
+  font-size: clamp(0.64rem, 0.4vw + 0.45rem, 0.64rem);
   font-weight: 500;
   letter-spacing: 0.02em;
   line-height: 1.72;
   color: var(--color-ink-muted);
-  max-width: 22rem;
+  max-width: 27rem;
   text-align: center;
   align-self: center;
   font-variant-numeric: lining-nums;
+  text-wrap: balance;
+}
+
+.hero-footer-lead {
+  display: block;
+  margin-inline: auto;
 }
 
 .fade-in {
@@ -360,7 +383,7 @@ main {
   }
 
   .hero-location {
-    margin-bottom: 1.9rem;
+    margin-bottom: 1.8rem;
     letter-spacing: 0.36em;
   }
 
@@ -369,7 +392,7 @@ main {
   }
 
   .cd-lab {
-    font-size: 0.32rem;
+    font-size: 0.34rem;
     letter-spacing: 0.14em;
   }
 
@@ -384,12 +407,19 @@ main {
 
   .hero-footer-text {
     line-height: 1.75;
+    margin-top: 1.8rem;
+    max-width: 100%;
+    font-size: clamp(0.54rem, 0.32vw + 0.46rem, 0.64rem);
   }
 }
 
 @media (max-width: 380px) {
   .hero-content-col {
     padding-inline: 1.1rem;
+  }
+
+  .hero-footer-text {
+    font-size: clamp(0.5rem, 0.28vw + 0.44rem, 0.64rem);
   }
 }
 
