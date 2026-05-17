@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="hero-shell">
       <div className="hero-frame">
         <div className="hero-image-col fade-in">
-          <img className="hero-img" src="/hero.jpg?v=20260509" alt="" width={904} height={1024} decoding="async" />
+          <img className="hero-img" src="/hero.jpeg?v=20260509" alt="" width={904} height={1024} decoding="async" />
           <div className="hero-img-flare" aria-hidden="true" />
           <div className="hero-img-gradient" aria-hidden="true" />
         </div>
