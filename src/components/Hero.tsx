@@ -33,13 +33,7 @@ export default function Hero() {
                 <Countdown />
               </div>
               <p className="hero-footer-text">
-                <span className="hero-footer-lead">
-                  {'A beautiful summer evening surrounded by nature,'}
-                  <br />
-                  {'music, laughter, and our favorite people.'}
-                </span>
-                <br />
-                {`We can't wait to celebrate with You.`}
+                {`We can't wait to celebrate with You!`}
                 <br />
                 {'Official invitation coming soon.'}
               </p>

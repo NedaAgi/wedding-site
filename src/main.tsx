@@ -6,23 +6,17 @@ import "./styles.css";
 const FONT_WAIT_MS = 3200;
 
 function waitForCriticalFonts(): Promise<void> {
-  if (!document.fonts?.load) {
+  if (!document.fonts) {
     return Promise.resolve();
   }
 
-  const loads = Promise.all([
-    document.fonts.load("400 16px 'Jessy Ohio'"),
-    document.fonts.load("400 16px 'Montserrat'"),
-    document.fonts.load("500 16px 'Montserrat'"),
-  ])
-    .then(() => undefined)
-    .catch(() => undefined);
+  const ready = document.fonts.ready.then(() => undefined).catch(() => undefined);
 
   const deadline = new Promise<void>((resolve) => {
     setTimeout(resolve, FONT_WAIT_MS);
   });
 
-  return Promise.race([loads, deadline]);
+  return Promise.race([ready, deadline]);
 }
 
 const root = document.getElementById("root");

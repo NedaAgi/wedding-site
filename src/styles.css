@@ -97,12 +97,12 @@ main {
   align-items: center;
   justify-content: center;
   background: var(--color-panel);
-  padding: clamp(2.75rem, 5vw, 4.4rem) clamp(2.2rem, 5vw, 4.3rem);
+  padding: clamp(2.2rem, 5vw, 4.3rem) clamp(2.5rem, 4.5vw, 4rem);
 }
 
 .hero-content-inner {
   width: 100%;
-  max-width: 31rem;
+  max-width: 40rem;
   display: flex;
   justify-content: center;
 }
@@ -122,7 +122,7 @@ main {
   font-weight: 400;
   letter-spacing: 0.58em;
   text-transform: uppercase;
-  color: var(--color-ink);
+  color: var(--color-ink-muted);
 }
 
 .hero-mini-line {
@@ -135,9 +135,9 @@ main {
 
 .hero-names {
   margin: 1rem 0 2rem 0;
-  padding: 0 0.25rem;
+  padding: 0.25rem 0.25rem;
   font-family: var(--font-script);
-  font-size: clamp(3.8rem, 6vw, 5.2rem);
+  font-size: clamp(5rem, 7vw, 6rem);
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: 0.045em;
@@ -145,6 +145,9 @@ main {
   align-items: center;
   gap: 1rem;
   color: var(--color-ink);
+  /* Isolate from countdown repaint in Safari */
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* Same script as names; smaller size + muted color so it reads as secondary */
@@ -163,7 +166,7 @@ main {
 .content-date {
   margin: 0 0 0.6rem;
   font-family: var(--font-ui);
-  font-size: clamp(0.8rem, 0.7vw + 0.8rem, 1rem);
+  font-size: clamp(1rem, 0.7vw + 1rem, 1.2rem);
   font-weight: 400;
   letter-spacing: 0.54em;
   text-transform: uppercase;
@@ -271,16 +274,17 @@ main {
   margin: 0;
   margin-top: 2.25rem;
   font-family: var(--font-ui);
-  font-size: clamp(0.64rem, 0.4vw + 0.45rem, 0.64rem);
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: clamp(0.8rem, 0.4vw + 0.5rem, 0.7rem);
+  font-weight: 400;
+  letter-spacing: 0.4em;
   line-height: 1.72;
   color: var(--color-ink-muted);
-  max-width: 27rem;
+  max-width: 40rem;
   text-align: center;
   align-self: center;
   font-variant-numeric: lining-nums;
   text-wrap: balance;
+  text-transform: uppercase;
 }
 
 .hero-footer-lead {
@@ -323,12 +327,11 @@ main {
 }
 
 @keyframes cdNumTick {
-  0%,
-  100% {
-    transform: scale(1);
+  0% {
+    opacity: 0.45;
   }
-  45% {
-    transform: scale(1.06);
+  100% {
+    opacity: 1;
   }
 }
 
